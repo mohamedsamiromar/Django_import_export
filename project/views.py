@@ -14,11 +14,7 @@ def Import_csv(request):
         dbframe = empexceldata
         for dbframe in dbframe.itertuples():
             obj = Person.objects.create(first_name=dbframe.first_name, last_name=dbframe.last_name, email=dbframe.email)
-            obj.save()
-
-        return render(request, 'input.html', {
-            'uploaded_file_url': myfile})
-    return render(request, 'input.html')
+        return render(request, 'input.html')
 
 
 
