@@ -18,3 +18,5 @@ def Import_csv(request):
             for df in df.itertuples():
                 obj = Person.objects.create(first_name=df.first_name, last_name=df.last_name, email=df.email)
     return render(request, 'input.html')
+
+
