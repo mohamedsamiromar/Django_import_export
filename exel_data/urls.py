@@ -18,5 +18,5 @@ from django.urls import path
 from project.views import Import_csv
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload_file', Import_csv)
+    path('upload_file', Import_csv, name='upload_file')
 ]
