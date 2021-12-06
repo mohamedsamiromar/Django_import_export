@@ -1,4 +1,4 @@
-# Django_import_export
+# Read Data From Excel
 read data from excel using Pandas and put the data in Django model 
 
 
