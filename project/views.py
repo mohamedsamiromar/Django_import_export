@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from tablib import Dataset
-
 from .models import Person
 import pandas as pd
-from django.contrib import messages
+import logging
+
+logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
 
 
 def Import_csv(request):
@@ -15,8 +15,11 @@ def Import_csv(request):
                           {'errors': 'the file content is not as expected'})
         else:
             df = pd.read_excel(myfile)
-            for df in df.itertuples():
-                obj = Person.objects.create(first_name=df.first_name, last_name=df.last_name, email=df.email)
+            for index, row in df.iterrows():
+                if pd.isna(row[0]):
+                    logging.debug(row)
+                    continue
+                else:
+                    obj = Person.objects.create(first_name=row.first_name, last_name=row.last_name, email=row.email)
     return render(request, 'input.html')
-
 
