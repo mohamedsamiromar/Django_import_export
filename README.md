@@ -11,8 +11,8 @@ The index of blank lines and their positions, and the number of valid lines
 ## Upload fiel
 In the feature it is allow for passenger to searching about for your trip endpoint
 
-Method	| Path	| Description	| User authenticated	
-------------- | ------------------------- | ------------- |:-------------:|
+Method	| Path	| Description	| 	
+------------- | ------------------------- 
 POST	| upload_file	| upload your file|  
 
 
