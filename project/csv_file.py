@@ -1,24 +1,22 @@
 from django.shortcuts import render
 import pandas as pd
-import logging
-from project.row import check_row
+from .row import check_row
 from .store_data import save_obj
+import logging
 
-logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
 
-
-def Import_excel_file(request):
+def Import_csv_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
         file = str(myfile)
 
-        if not file.endswith('xlsx') or file.endswith('xls'):
+        if not file.endswith('csv'):
             return render(request, 'messages.html',
                           {'messages': 'The File Content Is Not As Expected'})
         else:
-            df = pd.read_excel(myfile)
             invalid_row = 0
             valid_row = 0
+            df = pd.read_csv(myfile)
 
             for index, row in df.iterrows():
                 if check_row(row, index):

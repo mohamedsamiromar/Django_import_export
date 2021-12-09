@@ -1,6 +1,8 @@
 import pandas as pd
 import logging
 
+from project.models import Person
+
 
 def check_row(row, index):
     if pd.isna(row[0]):

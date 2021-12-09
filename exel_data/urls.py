@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from project.views import Import_file
+from project.views import Import_excel_file
+from project.csv_file import Import_csv_file
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('upload_file', Import_file, name='upload_file')
+    path('upload_excel', Import_excel_file, name='upload_file'),
+    path('upload_csv', Import_csv_file, name='upload_file'),
 ]
