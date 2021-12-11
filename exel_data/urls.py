@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.views.generic import TemplateView
+
 from project.views import Import_excel_file
 from project.csv_file import Import_csv_file
 urlpatterns = [
+    path('', TemplateView.as_view(template_name='home.html'), name="home"),
     path('admin/', admin.site.urls),
     path('upload_excel', Import_excel_file, name='upload_file'),
     path('upload_csv', Import_csv_file, name='upload_file'),

@@ -27,4 +27,4 @@ def Import_csv_file(request):
 
             logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
             return render(request, 'messages.html', {"messages": "Success"})
-    return render(request, 'input.html')
+    return render(request, 'upload_excel_file.html')

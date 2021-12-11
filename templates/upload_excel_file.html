@@ -5,7 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<h1>{{ messages }}</h1>
+ <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="file">
+    <button type="submit">Upload</button>
+  </form>
 <h2><a href="{% url 'home' %}">Back</a></h2>
 
 </body>
