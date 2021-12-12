@@ -7,7 +7,7 @@ from .row import check_row
 import logging
 
 
-def update_email(request):
+def update_email_excel_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
         file = str(myfile)
@@ -27,16 +27,16 @@ def update_email(request):
                         check_index = Person.objects.get(first_name=row.first_name, last_name=row.last_name)
                     except Person.DoesNotExist:
                         check_index = None
-                    if check_index is None:
-                        save_obj(row)
-                    else:
-                        if check_index.email == row.email:
-                            return render(request, 'messages.html', {"message": "the file has the same emails, Please "
-                                                                                "check your emails "})
+                    if check_index:
                         check_index.email = row.email
                         check_index.created_at = now
                         check_index.save()
                         update_row += 1
+                    else:
+                        if check_index.email == row.email:
+                            return render(request, 'messages.html', {"message": "the file has the same emails, Please "
+                                                                                "check your emails "})
+                        save_obj(row)
             logging.debug(('Updates Row : {}'.format(update_row), 'Invalid Row: {}'.format(Invalid_row)))
             return render(request, 'messages.html', {"messages": " Updated Success"})
     return render(request, 'update_email.html')
