@@ -1,4 +1,4 @@
 *.pyc
 /venv/
 /.idea/
-/person_log.log
+/person_log.log/
