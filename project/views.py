@@ -18,6 +18,7 @@ def Import_excel_file(request):
                           {'messages': 'The File Content Is Not As Expected'})
         else:
             df = pd.read_excel(myfile)
+            data_sum = df.shape
             invalid_row = 0
             valid_row = 0
 
@@ -32,9 +33,3 @@ def Import_excel_file(request):
             return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
 
-# def try_update_email(request, pk=None):
-#     quer_set = Person.objects.get(pk=pk)
-#     if quer_set:
-#         email = 'Ali@gmail.com'
-#         quer_set.email = email
-#         quer_set.save()

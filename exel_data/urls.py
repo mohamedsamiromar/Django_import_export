@@ -18,11 +18,10 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 from CSV_data.csv_file import Import_csv_file
-from project.update_emails_from_excel_file import update_email_excel_file
+from project.update_row_from_excel_file import update_email_excel_file
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name="home"),
     path('admin/', admin.site.urls),
     path('', include('CSV_data.urls')),
     path('', include('project.urls')),
-    path('update_email', update_email_excel_file, name='update_email')
 ]

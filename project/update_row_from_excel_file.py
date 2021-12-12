@@ -24,15 +24,16 @@ def update_email_excel_file(request):
                     Invalid_row += 1
                 else:
                     try:
-                        check_index = Person.objects.get(first_name=row.first_name, last_name=row.last_name)
+                        get_row = Person.objects.get(email=row.email)
                     except Person.DoesNotExist:
-                        check_index = None
-                    if check_index:
-                        check_index.email = row.email
-                        check_index.created_at = now
-                        check_index.save()
+                        get_row = None
+                    if get_row:
+                        get_row.country = row.country
+                        get_row.city = row.city
+                        get_row.created_at = now
+                        get_row.save()
                         update_row += 1
-                    elif check_index.email == row.email:
+                    elif get_row.email == row.email:
 
                         return render(request, 'messages.html', {"message": "the file has the same emails, Please "
                                                                             "check your emails "})
