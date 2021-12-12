@@ -19,9 +19,11 @@ from django.views.generic import TemplateView
 
 from project.views import Import_excel_file
 from project.csv_file import Import_csv_file
+from project.email import update_email
 urlpatterns = [
     path('', TemplateView.as_view(template_name='home.html'), name="home"),
     path('admin/', admin.site.urls),
     path('upload_excel', Import_excel_file, name='upload_file'),
     path('upload_csv', Import_csv_file, name='upload_file'),
+    path('update_email', update_email, name='update_email')
 ]
