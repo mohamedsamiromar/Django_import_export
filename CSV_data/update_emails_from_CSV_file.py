@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404, render
 import pandas as pd
 from django.utils.timezone import now
-from .store_data import save_obj
-from .models import Person
-from .row import check_row
+from project.store_data import save_obj
+from project.models import Person
+from project.row import check_row
 import logging
 
 

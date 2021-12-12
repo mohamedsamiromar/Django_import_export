@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import pandas as pd
-from .row import check_row
-from .store_data import save_obj
+from project.row import check_row
+from project.store_data import save_obj
 import logging
 
 
