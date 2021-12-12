@@ -32,10 +32,11 @@ def update_email_excel_file(request):
                         check_index.created_at = now
                         check_index.save()
                         update_row += 1
+                    elif check_index.email == row.email:
+
+                        return render(request, 'messages.html', {"message": "the file has the same emails, Please "
+                                                                            "check your emails "})
                     else:
-                        if check_index.email == row.email:
-                            return render(request, 'messages.html', {"message": "the file has the same emails, Please "
-                                                                                "check your emails "})
                         save_obj(row)
             logging.debug(('Updates Row : {}'.format(update_row), 'Invalid Row: {}'.format(Invalid_row)))
             return render(request, 'messages.html', {"messages": " Updated Success"})

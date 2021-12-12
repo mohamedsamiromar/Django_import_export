@@ -80,3 +80,8 @@ INFO:django.utils.autoreload:D:\django projects\exel_data\exel_data\urls.py chan
 INFO:django.utils.autoreload:D:\django projects\exel_data\project\update_emails_from_excel_file.py changed, reloading.
 INFO:django.utils.autoreload:D:\django projects\exel_data\exel_data\settings.py changed, reloading.
 INFO:django.utils.autoreload:D:\django projects\exel_data\exel_data\urls.py changed, reloading.
+DEBUG:root:('Index: 4', 'First Name: nan', 'Last Name: n', 'Email: n@gmail.com')
+DEBUG:root:('Updates Row : 6', 'Invalid Row: 1')
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\update_emails_from_excel_file.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\models.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\models.py changed, reloading.
