@@ -1,9 +1,9 @@
 from django.shortcuts import get_object_or_404, render
 import pandas as pd
 from django.utils.timezone import now
-from . store_data import save_obj
+from .store_data import save_obj
 from .models import Person
-from . row import check_row
+from .row import check_row
 import logging
 
 
@@ -18,15 +18,25 @@ def update_email(request):
         else:
             df = pd.read_excel(myfile)
             update_row = 0
+            Invalid_row = 0
             for index, row in df.iterrows():
                 if check_row(row, index):
-                    check_index = Person.objects.get(pk=index)
-                    if check_index is True:
-                        person = Person()
-                        person.email = check_index.email
-                        person.created_at = now
-                        person.save()
-                        update_row += 1
-                    else:
+                    Invalid_row += 1
+                else:
+                    try:
+                        check_index = Person.objects.get(first_name=row.first_name, last_name=row.last_name)
+                    except Person.DoesNotExist:
+                        check_index = None
+                    if check_index is None:
                         save_obj(row)
-            logging.debug("Update Row: {}".format(update_row))
+                    else:
+                        if check_index.email == row.email:
+                            return render(request, 'messages.html', {"message": "the file has the same emails, Please "
+                                                                                "check your emails "})
+                        check_index.email = row.email
+                        check_index.created_at = now
+                        check_index.save()
+                        update_row += 1
+            logging.debug(('Updates Row : {}'.format(update_row), 'Invalid Row: {}'.format(Invalid_row)))
+            return render(request, 'messages.html', {"messages": " Updated Success"})
+    return render(request, 'update_email.html')

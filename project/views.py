@@ -2,6 +2,7 @@ from django.shortcuts import render
 import pandas as pd
 import logging
 from project.row import check_row
+from .models import Person
 from .store_data import save_obj
 
 logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
@@ -30,3 +31,10 @@ def Import_excel_file(request):
             logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
             return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
+
+# def try_update_email(request, pk=None):
+#     quer_set = Person.objects.get(pk=pk)
+#     if quer_set:
+#         email = 'Ali@gmail.com'
+#         quer_set.email = email
+#         quer_set.save()
