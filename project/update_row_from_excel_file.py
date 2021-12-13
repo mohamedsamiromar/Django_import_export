@@ -41,4 +41,4 @@ def update_email_excel_file(request):
                         save_obj(row)
             logging.debug(('Updates Row : {}'.format(update_row), 'Invalid Row: {}'.format(Invalid_row)))
             return render(request, 'messages.html', {"messages": " Updated Success"})
-    return render(request, 'update_email.html')
+    return render(request, 'update_excel.html')

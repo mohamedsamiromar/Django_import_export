@@ -11,6 +11,9 @@ logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
 def Import_excel_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
+        if myfile is None:
+            return render(request, "messages.html", {"message": "Please, Upload Your File"})
+
         file = str(myfile)
 
         if not file.endswith('xlsx') or file.endswith('xls'):
@@ -18,7 +21,6 @@ def Import_excel_file(request):
                           {'messages': 'The File Content Is Not As Expected'})
         else:
             df = pd.read_excel(myfile)
-            data_sum = df.shape
             invalid_row = 0
             valid_row = 0
 
