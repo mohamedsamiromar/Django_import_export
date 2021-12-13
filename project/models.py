@@ -13,4 +13,4 @@ class Person(models.Model):
     created_by = models.CharField(max_length=30, default='system')
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
     updated_by = models.CharField(max_length=30, default='system')
-    updated_at = models.DateTimeField(auto_now_add=True, blank=True)
+    updated_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)

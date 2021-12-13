@@ -1,5 +1,7 @@
 from django.shortcuts import render
 import pandas as pd
+
+from project.models import Person
 from project.row import check_row
 from project.store_data import save_obj
 import logging
@@ -8,6 +10,7 @@ import logging
 def Import_csv_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
+
         file = str(myfile)
 
         if not file.endswith('csv'):
@@ -23,7 +26,14 @@ def Import_csv_file(request):
                     invalid_row += 1
                 else:
                     valid_row += 1
-                    save_obj(row)
+                    try:
+                        check_email = Person.objects.filter(email=row.email)
+                        if check_email:
+                            raise Exception("")
+                    except:
+                        return render(request, 'messages.html', {"messages": "Sorry,The File Have Duplicate Emails"})
+                    else:
+                        save_obj(row)
 
             logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
             return render(request, 'messages.html', {"messages": "Success"})

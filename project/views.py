@@ -29,9 +29,14 @@ def Import_excel_file(request):
                     invalid_row += 1
                 else:
                     valid_row += 1
-                    save_obj(row)
-
+                    try:
+                        check_email = Person.objects.filter(email=row.email)
+                        if check_email:
+                            raise Exception("")
+                    except:
+                        return render(request, 'messages.html', {"messages": "Sorry,The File Have Duplicate Emails"})
+                    else:
+                        save_obj(row)
             logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
             return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
-

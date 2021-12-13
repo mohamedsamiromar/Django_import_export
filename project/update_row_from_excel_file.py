@@ -10,6 +10,8 @@ import logging
 def update_email_excel_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
+        if myfile is None:
+            return render(request, 'messages.html', {"messages": "Please, Upload Your File"})
         file = str(myfile)
 
         if not file.endswith('xlsx') or file.endswith('xls'):
@@ -30,7 +32,8 @@ def update_email_excel_file(request):
                     if get_row:
                         get_row.country = row.country
                         get_row.city = row.city
-                        get_row.created_at = now
+                        get_row.job_title = row.job_title
+                        get_row.created_at = now()
                         get_row.save()
                         update_row += 1
                     elif get_row.email == row.email:

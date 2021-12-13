@@ -7,9 +7,11 @@ from project.row import check_row
 import logging
 
 
-def update_email_excel_file(request):
+def update_excel_file(request):
     if request.method == 'POST':
         myfile = request.FILES['file']
+        if myfile is None:
+            return render(request, 'messages.html', {"message"})
         file = str(myfile)
 
         if not file.endswith('xlsx') or file.endswith('xls'):
@@ -28,7 +30,9 @@ def update_email_excel_file(request):
                     except Person.DoesNotExist:
                         check_index = None
                     if check_index:
-                        check_index.email = row.email
+                        check_index.city = row.city
+                        check_index.country = row.country
+                        check_index.job_title = row.job_title
                         check_index.created_at = now
                         check_index.save()
                         update_row += 1
