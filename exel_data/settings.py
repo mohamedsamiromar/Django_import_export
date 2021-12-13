@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'project',
     'import_export',
-    'CSV_data'
 ]
 
 MIDDLEWARE = [
