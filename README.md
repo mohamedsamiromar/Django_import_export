@@ -11,8 +11,8 @@ The index of blank lines and their positions, and the number of valid lines
 ## Upload excel file
 In the feature allowed uploading file
 
-Method	| Path	| Description	| User 
-------------- | ------------------------- | ------------- |:-------------:|
+Method	| Path	| Description	 
+------------- | ------------------------- :|
 POST	| upload_file| upload your file|  
 
 
