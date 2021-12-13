@@ -9,19 +9,14 @@ Finally, the script will provide you with a log file
 The index of blank lines and their positions, and the number of valid lines 
 
 ## Upload excel file
-In the feature it is allowed uploading csv file
+In the feature allowed uploading file
 
 Method	| Path	| Description	| User 
 ------------- | ------------------------- | ------------- |:-------------:|
-POST	| Import_excel_file| upload your file|  
+POST	| upload_file| upload your file|  
 
 
-## Upload excel CSV
-In the feature it is allowed uploading csv file
 
-Method	| Path	| Description	| User 
-------------- | ------------------------- | ------------- |:-------------:|
-POST	| Import_csv_file| upload your file|  
 
 
 # Run Project
