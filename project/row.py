@@ -1,6 +1,10 @@
 import pandas as pd
 import logging
 
+'''
+this function will check if the file has gotten an empty row, will skip the row
+'''
+
 
 def check_row(row, index):
     if pd.isna(row[0]):
