@@ -45,6 +45,7 @@ def Import_file(request):
                 if get_row is None:
 
                     save_obj(row)  # The function working to insert row in database
+
                 else:
                     update_row(get_row, row)  # The function working to update row
                     updated_row += 1
