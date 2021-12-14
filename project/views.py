@@ -91,7 +91,7 @@ def Import_file(request):
                 else:
                     update_row(get_row, row)  # The function working to update row
                     updated_row += 1
-
+                    logging.debug(('Valid Row : {}'.format(updated_row), 'Invalid Row: {}'.format(invalid_row)))
         logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
         return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
