@@ -1,8 +1,13 @@
 from import_export.admin import ImportExportModelAdmin
 from django.contrib import admin
-from .models import Person
+from .models import Person, ReadUpdate
 
 
 @admin.register(Person)
 class PersonAdmin(ImportExportModelAdmin):
-    list_display = ('first_name', 'last_name', 'email')
+    pass
+
+
+@admin.register(ReadUpdate)
+class ReadUpdateAdmin(ImportExportModelAdmin):
+    pass

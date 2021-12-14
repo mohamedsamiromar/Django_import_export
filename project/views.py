@@ -2,16 +2,15 @@ from django.shortcuts import render
 import pandas as pd
 import logging
 from project.row import check_row
-from .models import Person
+from .models import Person, ReadUpdate
 from .store_data import save_obj
-from django.utils.timezone import now
 from .update import update_row
-
 logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
 
 '''
 read data from file(excel, CSV) and create Django object from the data file 
 '''
+
 
 def Import_file(request):
     if request.method == 'POST':
@@ -21,9 +20,9 @@ def Import_file(request):
 
         file = str(myfile)
         if file.endswith('xlsx') or file.endswith('xls'):  # check if file end with xlsx
-            df = pd.read_excel(myfile)
+            df = pd.read_excel(myfile, keep_default_na=False)
         elif file.endswith('csv'):  # check if file end with csv
-            df = pd.read_csv(myfile)
+            df = pd.read_csv(myfile, keep_default_na=False)
         else:  # if the file does not end with xlsx or csv will return this  message
             return render(request, 'messages.html',
                           {'messages': 'The File Content Is Not As Expected'})
@@ -40,8 +39,8 @@ def Import_file(request):
 
                 # check if the row exists will update the row, if not exist will insert a row in the database
                 try:
-                    get_row = Person.objects.get(email=row.email)
-                except Person.DoesNotExist:
+                    get_row = ReadUpdate.objects.get(sku=row.sku)
+                except ReadUpdate.DoesNotExist:
                     get_row = None
                 if get_row is None:
 
@@ -49,7 +48,8 @@ def Import_file(request):
                 else:
                     update_row(get_row, row)  # The function working to update row
                     updated_row += 1
-                    logging.debug(('Valid Row : {}'.format(updated_row), 'Invalid Row: {}'.format(invalid_row)))
+
+        logging.debug(('Update Row : {}'.format(updated_row), 'Invalid Row: {}'.format(invalid_row)))
         logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
         return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
