@@ -18,5 +18,5 @@ class Person(models.Model):
 
 class ReadUpdate(models.Model):
     sku = models.CharField(max_length=750, null=True, unique=True)
-    image_links = models.CharField(max_length=3000, null=True)
+    image_links = models.CharField(max_length=1500, null=True)
     attachment_links = models.CharField(max_length=1500, null=True)

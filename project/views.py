@@ -20,35 +20,38 @@ def Import_file(request):
         if file.endswith('xlsx') or file.endswith('xls'):  # check if file end with xlsx
             df = pd.read_excel(myfile)
         elif file.endswith('csv'):  # check if file end with csv
-            df = pd.read_csv(myfile)
+            df = pd.read_csv(myfile, skipinitialspace=True)
         else:  # if the file does not end with xlsx or csv will return this  message
             return render(request, 'messages.html',
                           {'messages': 'The File Content Is Not As Expected'})
 
-        invalid_row = 0  # the counter will count the invalid row
-        valid_row = 0  # the counter will count the valid row
-        updated_row = 0  # the counter will count the updated row
+        # invalid_row = 0  # the counter will count the invalid row
+        # valid_row = 0  # the counter will count the valid row
+        # updated_row = 0  # the counter will count the updated row
+        df.dropna(
+            axis=0,
+            how='any',
+            thresh=None,
+            subset=None,
+            inplace=True,
+        )
 
         for index, row in df.iterrows():  # The loop reads the rows from the file
-            if check_row(row, index, df):  # here will skip any empty row
-                invalid_row += 1  # Add 1 to counter if has invalid row
+
+            # check if the row exists will update the row, if not exist will insert a row in the database
+            try:
+                get_row = ReadUpdate.objects.get(sku=row.sku)
+            except ReadUpdate.DoesNotExist:
+                get_row = None
+            if get_row is None:
+
+                save_obj(row)  # The function working to insert row in database
+
             else:
-                valid_row += 1  # if file hasn't got any empty row will add 1 to counter
+                update_row(get_row, row)  # The function working to update row
+                # updated_row += 1
 
-                # check if the row exists will update the row, if not exist will insert a row in the database
-                try:
-                    get_row = Person.objects.get(email=row.email)
-                except Person.DoesNotExist:
-                    get_row = None
-                if get_row is None:
-
-                    save_obj(row)  # The function working to insert row in database
-
-                else:
-                    update_row(get_row, row)  # The function working to update row
-                    updated_row += 1
-
-        logging.debug(('Update Row : {}'.format(updated_row), 'Invalid Row: {}'.format(invalid_row)))
-        logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
+        # logging.debug(('Update Row : {}'.format(updated_row), 'Invalid Row: {}'.format(invalid_row)))
+        # logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
         return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
