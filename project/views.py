@@ -68,7 +68,7 @@ def upload(request):
 
 def listing(request):
     contact_list = ReadUpdate.objects.all()
-    paginator = Paginator(contact_list, 100) # Show 25 contacts per page.
+    paginator = Paginator(contact_list, 100) # Show 100 contacts per page.
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
