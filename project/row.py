@@ -6,19 +6,6 @@ this function will check if the file has gotten an empty row, will skip the row
 '''
 
 
-#
-#
-# def check_row(row, index):
-#     if pd.isna(row[0]):
-#         empty_row = ('Index: {}'.format(index), 'First name: {}'.format(row.first_name),
-#                      'Last name: {}'.format(row.last_name), 'email: {}'.format(row.email),
-#                      'job_title: {}'.format(row.job_title), 'city: {}'.format(row.city),
-#                      'country: {}'.format(row.country))
-#         logging.debug(empty_row)
-#
-#         return check_row
-
-
 def check_row(df):
     for index, row in df.iterrows():
         if df.isna:

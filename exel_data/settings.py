@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'exel_data.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'execl_data',
+        'NAME': 'upload_data',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
