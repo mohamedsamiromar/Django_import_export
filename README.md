@@ -13,7 +13,7 @@ In the feature allowed uploading file
 
 Method	| Path	| Description	| User authenticated	
 ------------- | ------------------------- | ------------- |:-------------:|
-POST	| upload_file	|   upload file using pandaas library
+POST	| upload_file	|   upload file your file and read file using pandaas library
 
 
 
