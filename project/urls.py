@@ -3,6 +3,6 @@ from .views import upload, listing
 
 urlpatterns = [
     path('upload_file', upload, name='upload_file'),
-    path('list_colums', listing, name='list_colums'),
+    path('listing', listing, name='list_colums'),
 
 ]

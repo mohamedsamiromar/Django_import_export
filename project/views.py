@@ -72,6 +72,6 @@ def listing(request):
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
-    return render(request, 'get_colums.html', {'page_obj': page_obj})
+    return render(request, 'listing.html', {'page_obj': page_obj})
 
 
