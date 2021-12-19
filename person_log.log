@@ -165,3 +165,6 @@ INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py change
 INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
 INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
 INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:D:\django projects\exel_data\exel_data\urls.py changed, reloading.
