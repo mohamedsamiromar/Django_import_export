@@ -4,7 +4,7 @@ import logging
 from .models import ReadUpdate
 from .store_data import save_obj
 from .update import update_row
-from .row import check_row
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 logging.basicConfig(filename='person_log.log', level=logging.DEBUG)
 
@@ -64,3 +64,14 @@ def upload(request):
         logging.debug(('Valid Row : {}'.format(valid_row), 'Invalid Row: {}'.format(invalid_row)))
         return render(request, 'messages.html', {"messages": "Success"})
     return render(request, 'upload_excel_file.html')
+
+
+def listing(request):
+    contact_list = ReadUpdate.objects.all()
+    paginator = Paginator(contact_list, 100) # Show 100 contacts per page.
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'listing.html', {'page_obj': page_obj})
+
+

@@ -1,0 +1,170 @@
+DEBUG:root:('Index: 1968', 'SKU: GH-CHA-24', 'image_links: data:image/jpeg;base64,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', 'attachment_links:  ')
+DEBUG:root:('Update Row : 0', 'Invalid Row: 1')
+DEBUG:root:('Valid Row : 5151', 'Invalid Row: 1')
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 85, in index
+    posts = Post.objects.all()  # fetching all post objects from database
+NameError: name 'Post' is not defined
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+WARNING:django.request:Not Found: /colums
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 91, in index
+    return render(request, 'index.html', {'trips': pages, 'pages': pages})
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_page' not found. 'admin_page' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 89, in index
+    return render(request, 'index.html', {'pages': pages})
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'admin_page' not found. 'admin_page' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /index
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 89, in index
+    return render(request, 'index.html', {'pages': pages})
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'index' not found. 'index' is not a valid view function or pattern name.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /list_colums
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 81, in get_colums
+    return render(request, 'index.html.html', {'colums': colums})
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html.html
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+ERROR:django.request:Internal Server Error: /list_colums
+Traceback (most recent call last):
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\django projects\exel_data\project\views.py", line 81, in get_colums
+    return render(request, 'index.html.html', {'colums': colums})
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\django projects\exel_data\venv\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html.html
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\views.py changed, reloading.
+INFO:django.utils.autoreload:D:\django projects\exel_data\project\urls.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:D:\django projects\exel_data\exel_data\urls.py changed, reloading.
