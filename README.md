@@ -1,11 +1,12 @@
 # Import data from file 
 
-read data from excel or CSV file, using Pandas library.
+read data from excel or CSV file, using Pandas library and insert it in datebase 
 
 ## Abstract
 
-the script will work when the user uploads the file, read the file using the pandas library, and will check the file formatting, It will xlsx or xls or CSV, and then start the processing of the file, if the file has an empty row the script will not select this is row and so on
-Finally, the script will provide you with a log file
+the script will work when the user uploads the file, read the file using the panda's library, will check the file formatting is xlsx or xls or CSV, and start the processing of the file, if the file has an empty row the script will not select these rows and so on.
+
+Last but not least, the script will provide you with a log file
 The index of blank lines and their positions, and the number of valid lines 
 
 ## Upload excel file
